@@ -12,7 +12,19 @@
     \intertext{now consider f(x) - 1, in other words} \\
     f(x) &= 1 + \cfrac{1}{x + \cfrac{1}{x + \cfrac{1}{x + \ddots}}} \quad \text{for x = 1 we have ...}\\
     f(1) &= 1 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{1 + \ddots}}}\\
-    \intertext{I will show that this continued fraction converges and surprisingly converges to the golden ratio}
+    \intertext{I will show that this continued fraction "converges" and surprisingly "converges" to the golden ratio}\\
+    \intertext{the "compact" form of the peculiar continued fraction, is found by...}\\
+    f(x) &= \cfrac{1}{x + \cfrac{1}{x + \cfrac{1}{x + \ddots}}},\quad y = f(x)\implies y = \cfrac{1}{x + \cfrac{1}{x + \cfrac{1}{x + \ddots}}}\\
+    \intertext{Therefore...} y &= \frac{1}{x + y} \equiv y = \cfrac{1}{x + \cfrac{1}{x + \cfrac{1}{x + \ddots}}}\\
+    y &= \frac{1}{x + y} \implies y(x + y) = 1 \implies y^2 + xy = 1\\
+    \intertext{A nice compact quadratic polynomial that can be expanded to the pecuilar continued fraction}\\
+    \intertext{Following the same algebraic manipulation it is easy to see that...}
+    f(x) &= 1 + \cfrac{1}{x + \cfrac{1}{x + \cfrac{1}{x + \ddots}}} \intertext{when} \quad f(x) &= y \quad\text{and}\quad x = 1\\
+    \implies y &= 1 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{1 + \ddots}}} \quad\text{is equivalent to} \quad y = 1 + \frac{1}{y}\\
+    \intertext{Then be the same algebraic manipulation we arrive at a very similar quadratic equation:}\\
+    0 &= y^2 - y - 1\\
+    \intertext{From the quadratic equation we can find the roots:}\\
+    y &= 1 \pm \frac{\sqrt{5}}{2}
 \end{align*}
 
 \end{document}
