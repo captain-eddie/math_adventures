@@ -1,0 +1,103 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Derivative of a Continued Fraction}
+\author{Edward Abel-Guobadia}
+\date{6-17-2023}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{Definitions}
+\begin{align}
+    g(x) &= \cfrac{1}{f(x) + \cfrac{1}{f(x) + \cfrac{1}{f(x) + \ddots}}}\\
+    g^\prime(x) &= ?
+\end{align}
+if y = g(x) and x = f(x)
+then:
+\begin{align}
+    g(x) &= \cfrac{1}{f(x) + \cfrac{1}{f(x) + \cfrac{1}{f(x) + \ddots}}}
+    \equiv y = \cfrac{1}{x + \cfrac{1}{x + \cfrac{1}{x + \ddots}}}\\
+    \therefore g^\prime(x) &= y^\prime
+\end{align}
+since
+\begin{align}
+    y = \cfrac{1}{x + \cfrac{1}{x + \cfrac{1}{x + \ddots}}}
+\end{align}
+then
+\begin{align}
+    y = \frac{1}{x + y} 
+\end{align}
+
+\section*{Algebra}
+since
+\begin{align}
+    y &= \frac{1}{x + y}\\
+    \therefore 1 &= y(x + y)\\
+    0 &= y^2 + xy - 1
+\end{align}
+by the quadratic formula we find y to be:
+\begin{align}
+    y = \frac{-x \pm\sqrt{x^2+4}}{2}
+\end{align}
+we will define g to be the negative part of y and h to be the positive part:
+\begin{align}
+    g = \frac{-\sqrt{x^2+4} - x}{2} \quad\text{and}\quad h = \frac{\sqrt{x^2+4} - x}{2}
+\end{align}
+\section*{Calculus}
+\begin{align*}
+    g^\prime = \frac{-1 + \frac{x}{\sqrt{x^2+4}}}{2} \quad\text{and}\quad h^\prime = \frac{-1 - \frac{x}{\sqrt{x^2+4}}}{2}
+\end{align*}
+since g is just the - part of y and h is just the + part. We can see that for some point y = g or y = h
+\begin{align}
+    (y^\prime-g^\prime)(y^\prime-h^\prime) &= 0\\
+    (y^\prime)^2 - h^\prime y^\prime - g^\prime y^\prime + g^\prime h^\prime &= 0\\
+    \therefore (y^\prime)^2 - (h^\prime + g^\prime)y^\prime + g^\prime h^\prime &= 0\\
+    \text{since}\quad h^\prime + g^\prime = -1 \quad\text{and}\quad g^\prime h^\prime = \frac{1}{4}-\frac{x^2}{4(x^2+4)}\\\\
+    \text{we arrive at}\qquad (y^\prime)^2+y^\prime-\left(\frac{x^2}{4(x^2+4)}-\frac{1}{4}\right) &= 0
+\end{align}
+we can simplify the last term:
+\begin{equation}
+    \left(\frac{x^2}{4(x^2+4)}-\frac{1}{4}\right) = \frac{-1}{x^2+4}
+\end{equation}
+giving us
+\begin{equation}
+    (y^\prime)^2+y^\prime+\frac{1}{x^2+4} = 0
+\end{equation}
+we will introduce a new variable u and set it to the last term:
+\begin{align}
+    u &= \frac{1}{x^2+4}
+\end{align}
+we can immediately see:
+\begin{align}
+    (y^\prime)^2+y^\prime+u&=0\\
+    (y^\prime)^2+y^\prime&=-u\\
+    y^\prime(y^\prime+1)&=-u
+\end{align}
+Finnaly we arrive at:
+\begin{equation}
+    y^\prime = \frac{u}{1+y^\prime}
+\end{equation}
+in expanded form we see:
+\begin{equation}
+    y^\prime=\cfrac{u}{1+\cfrac{u}{1+\cfrac{u}{1+\ddots}}}
+\end{equation}
+
+\section*{Are u important... yes :)}
+From the initial definitions of g(x) and f(x) I think I can infer that if:
+\begin{align}
+    g(x) &= \cfrac{1}{f(x)+\cfrac{1}{f(x)+\cfrac{1}{f(x)+\ddots}}}\\
+    \text{then}\\
+    g^\prime(x)&=\cfrac{u}{f^\prime(x)+\cfrac{u}{f^\prime(x)+\cfrac{u}{f^\prime(x) + \ddots}}}\\
+    \text{for some u}
+\end{align}
+My question is what determines u? Is there some way to calculate u? Some algorithm we can follow that gives us u?
+I tried lots of strange and suspicious math, but my tactics could not find a system for determining u.
+On my quest for u I found some strange results that I have written in my notebook, but I suspect they are unworthy to be seen by anyone
+Anyway thats all I have for u... I might try integrating a continued fraction(c.f.) or a backward continued fraction(b.c.f.)
+Or maybe a c.f. of derivatives Or what about a c.f. of integrals!?
+Also I think there might be strange connection between c.f's and generating functions, but I have done no math on the matter, just a hunch I have
+
+\end{document}
