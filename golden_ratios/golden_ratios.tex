@@ -79,5 +79,26 @@
     \intertext{This system of equations implies $m=2$ and $n=0$ but this contradicts the defintion that $n\in\mathbb{N^+}$}\\
     \intertext{With this, it is shown that $n^2+4$ is never a perfect sqaure for all $n\in\mathbb{N^+}$ which implies that all solutions to $y^2-ny-1=0$ for $n\in\mathbb{N^+}$ are irratioinal. QED}
 \end{align*}
+\subsection*{The "golden equations"}
+\begin{align}
+    \intertext{I define the golden equations to be the set of equations derived from $y^2-ny-1=0$ for $n\in\mathbb{N^+}$ particularly these two equations:}
+    y &= n+\cfrac{1}{n+\cfrac{1}{n+\cfrac{1}{\ddots}}}\quad\text{in compact form:}\quad y = n+\frac{1}{y}\\
+    y&=\sqrt{1+n\sqrt{1+n\sqrt{1+\dots}}}\quad\text{in compact form:}\quad y=\sqrt{1+ny}
+\end{align}
+\begin{align*}
+    \intertext{For $n\in\mathbb{N^+}$ I will show that the solutions to these equations are irrational, and i define the solutions to these equations to be "golden" as the golden ratio is the solution to these equations when $n=1$, in short I will define a seqeunce of numbers that I call "golden numbers". A number is a golden number if it is an irrational solution to its corresponding golden equations. I am doing this to show that the golden ratio is trivial and there is nothing special about it. And it will be made clear that there are countably infinte golden numbers.}\\
+\end{align*}
+\subsubsection*{Irrationality of solutions to golden equations}
+\begin{align*}
+    \intertext{The proof that the solutions to the golden equations are irrational is trivial as I have already proved that the solutions to the golden polynomial from which the golden eqaitions are derived from are irrational.}\\
+    \intertext{Let $n\in\mathbb{N^+}$}
+    y &= n+\cfrac{1}{n+\cfrac{1}{n+\cfrac{1}{\ddots}}}\implies y = n+\frac{1}{y}\\
+    y&=n+\frac{1}{y} \implies y^2-ny-1=0 \implies y=\frac{n\pm\sqrt{n^2+4}}{2}\\
+    \intertext{And as I have shown above, $y$ is always irratioinal when $y=\frac{n\pm\sqrt{n^2+4}}{2}$}\\
+    \intertext{Similarly, it can be easily found that the second golden ratio also only has irratioinal solutions:}\\
+    y&=\sqrt{1+n\sqrt{1+n\sqrt{1+\dots}}}\implies y=\sqrt{1+ny}\\
+    y&=\sqrt{1+ny} \implies y^2-ny-1=0 \implies y=\frac{n\pm\sqrt{n^2+4}}{2}\\
+    \intertext{And again as I have already shown $y=\frac{n\pm\sqrt{n^2+4}}{2}$ is irrational for nonzero natural number, $n$.}\\
+\end{align*}
 
 \end{document}
