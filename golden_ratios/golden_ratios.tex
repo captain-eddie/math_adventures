@@ -60,7 +60,24 @@
     \intertext{The solution to this quadratic is:}\\
     y&=\frac{n\pm\sqrt{n^2+4}}{2}\\
     \intertext{I will show that for any positive natural number this solution is always irrational and I will show that this solution is the only soltuion to a certain set of peculiar equations... just like the golden ratio}\\
-    \\
+\end{align*}
+\subsection*{Irrationality of solutions to the "golden polynomial"}
+\begin{align*}
+    \intertext{Let}\\
+    y&=\frac{n\pm\sqrt{n^2+4}}{2}\quad n \in \mathbb{N^+}\\
+    \intertext{If y is irrational then by the defintion of irrational numbers $n\pm\sqrt{n^2+4}$ cannot be an integer. This implies that $n^2 + 4$ is not a perfect sqaure. I will proceed by contradiction.}\\
+    \intertext{Let}\\
+    m^2 &= n^2 + 4\quad\text{for $n \in \mathbb{N^+} \quad m \in \mathbb{N}$}\\
+    \implies 4 &= m^2 - n^2\\
+    \implies 4 &= (m-n)(m+n)\\
+    \intertext{Since $4=4\times1$ or $4=2\times2$}\\
+    \implies 4 &= m-n\quad\text{and}\quad 1=m+n\\
+    \intertext{But this is logically impossible since $m+n>m-n$ also we have:}\\
+    1&=m-n\quad\text{and}\quad 4=m+n\\
+    \intertext{This system of equations implies $m=\frac{5}{2}$ which contradicts the defintion that $m\in\mathbb{N}$ finnaly we have:}\\
+    2&=m-n\quad\text{and}\quad 2 = m+n\\
+    \intertext{This system of equations implies $m=2$ and $n=0$ but this contradicts the defintion that $n\in\mathbb{N^+}$}\\
+    \intertext{With this, it is shown that $n^2+4$ is never a perfect sqaure for all $n\in\mathbb{N^+}$ which implies that all solutions to $y^2-ny-1=0$ for $n\in\mathbb{N^+}$ are irratioinal. QED}
 \end{align*}
 
 \end{document}
