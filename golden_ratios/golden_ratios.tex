@@ -3,6 +3,7 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{mathtools}
 
 \begin{document}
 
@@ -90,15 +91,26 @@
 \end{align*}
 \subsubsection*{Irrationality of solutions to golden equations}
 \begin{align*}
-    \intertext{The proof that the solutions to the golden equations are irrational follows by transitivity as I have already shwon that the golden polynomial, and by extension its solutions, is equivalent to the golden equations. In fact, the golden equations are derived from the golden polynomial.}\\
+    \intertext{The proof that the solutions to the golden equations are irrational follows by transitivity as I have already shwon that the golden polynomial, and by extension its solutions, is equivalent to the golden equations. This is clear since the golden equations are derived from the golden polynomial.}\\
     \intertext{Let $n\in\mathbb{N^+}$}
     y &= n+\cfrac{1}{n+\cfrac{1}{n+\cfrac{1}{\ddots}}}\implies y = n+\frac{1}{y}\\
     y&=n+\frac{1}{y} \implies y^2-ny-1=0 \implies y=\frac{n\pm\sqrt{n^2+4}}{2}\\
     \intertext{And as I have shown above, $y$ is always irratioinal when $y=\frac{n\pm\sqrt{n^2+4}}{2}$}\\
-    \intertext{Similarly, it can be easily found that the second golden ratio also only has irratioinal solutions:}\\
+    \intertext{Similarly, it can be easily found that the second golden equation also only has irratioinal solutions:}\\
     y&=\sqrt{1+n\sqrt{1+n\sqrt{1+\dots}}}\implies y=\sqrt{1+ny}\\
     y&=\sqrt{1+ny} \implies y^2-ny-1=0 \implies y=\frac{n\pm\sqrt{n^2+4}}{2}\\
     \intertext{And again as I have already shown $y=\frac{n\pm\sqrt{n^2+4}}{2}$ is irrational for nonzero natural number, $n$.}\\
+\end{align*}
+
+\section*{Golden numbers}
+\begin{align*}
+    \intertext{In this section I will define a set of numbers I call golden numbers, and I will show that this set is countably infinite.}\\
+    \intertext{Let}\\
+    \Phi \coloneq \left\{p_n \mid p_n=\frac{n+\sqrt{n^2+4}}{2}, n\in\mathbb{N^+}\right\}\\
+    p_1=\phi\quad\text{The golden ratio, $\phi\approx 1.6180$}\\
+    p_2\approx2.4142\quad\text{The "second" golden ratio}\\
+    \intertext{I have now defined $\Phi$, the set of golden numbers. Next I will prove that the set is countably infinte by proving that there exixts a bijection from $\Phi$ to the set of natural numbers $\mathbb{N}$.}\\
+    \text{TODO: prove the bijection... how?????}
 \end{align*}
 
 \end{document}
