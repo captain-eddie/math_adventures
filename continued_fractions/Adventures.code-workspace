@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": ".."
+		},
+		{
+			"path": "../../../cs_stuff/python_code/coding_adventures"
 		}
 	],
 	"settings": {}
